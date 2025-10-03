@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Judah Odoom</title>
+  <link rel="stylesheet" href="css/styles-mobile.css" media="only screen and (max-width:480px)">
+  <link rel="stylesheet" href="css/styles-tablet.css" media="only screen and (min-width:481px) and (max-width:1024px)">
+  <link rel="stylesheet" href="css/styles-desktop.css" media="only screen and (min-width:1025px)">
+</head>
+<body>
+  <div id="wrapper">
+    <header id="banner">
+      <h1>Contact</h1>
+    </header>
+
+    <nav id="nav">
+      <a class="button" href="index.html">Home</a>
+      <a class="button" href="about.html">About</a>
+      <a class="button" href="projects.html">Projects</a>
+      <a class="button" href="video.html">Video</a>
+      <a class="button current" href="contact.html">Contact</a>
+    </nav>
+
+    <main id="content">
+      <h2>Reach out</h2>
+      <p>Email: <a href="mailto:judah.odoom@ontariotechu.net">judah.odoom@ontariotechu.net</a></p>
+      <p>Phone: <a href="tel:+16478903643">(647) 890 3643</a></p>
+
+      <form id="contactForm" action="#" method="post" novalidate>
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="name@example.com">
+
+        <label for="phone">Phone</label>
+        <!-- Pattern accepts formats like (647) 890 3643 or 647-890-3643 -->
+        <input id="phone" name="phone" type="tel" pattern="^(\(\d{3}\)\s?\d{3}\s?\d{4}|\d{3}[-\s]?\d{3}[-\s]?\d{4})$" placeholder="(647) 890 3643">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="button cta">Send</button>
+      </form>
+    </main>
+
+    <footer id="footer"><p>© <span id="year"></span> Judah Odoom</p></footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

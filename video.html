@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Intro Video | Judah Odoom</title>
+  <link rel="stylesheet" href="css/styles-mobile.css" media="only screen and (max-width:480px)">
+  <link rel="stylesheet" href="css/styles-tablet.css" media="only screen and (min-width:481px) and (max-width:1024px)">
+  <link rel="stylesheet" href="css/styles-desktop.css" media="only screen and (min-width:1025px)">
+</head>
+<body>
+  <div id="wrapper">
+    <header id="banner">
+      <h1>Intro Video</h1>
+    </header>
+
+    <nav id="nav">
+      <a class="button" href="index.html">Home</a>
+      <a class="button" href="about.html">About</a>
+      <a class="button" href="projects.html">Projects</a>
+      <a class="button current" href="video.html">Video</a>
+      <a class="button" href="contact.html">Contact</a>
+    </nav>
+
+    <main id="content">
+      <h2>Meet Judah</h2>
+      <!-- Replace sources when you have them. Keep both mp4 & ogv for broad support. -->
+      <video id="intro" width="640" height="360" controls poster="assets/video-poster.jpg">
+        <source src="assets/intro.mp4" type="video/mp4">
+        <source src="assets/intro.ogv" type="video/ogg">
+        Your browser doesn't support HTML5 video.
+      </video>
+      <p><button onclick="playPause()">Play/Pause</button></p>
+    </main>
+
+    <footer id="footer"><p>© <span id="year"></span> Judah Odoom</p></footer>
+  </div>
+
+  <script>
+    const myVideo = document.getElementById('intro');
+    function playPause(){ if (myVideo.paused) myVideo.play(); else myVideo.pause(); }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Judah Odoom</title>
+  <link rel="stylesheet" href="css/styles-mobile.css" media="only screen and (max-width:480px)">
+  <link rel="stylesheet" href="css/styles-tablet.css" media="only screen and (min-width:481px) and (max-width:1024px)">
+  <link rel="stylesheet" href="css/styles-desktop.css" media="only screen and (min-width:1025px)">
+</head>
+<body>
+  <div id="wrapper">
+    <header id="banner">
+      <h1>About Me</h1>
+    </header>
+
+    <nav id="nav">
+      <a class="button" href="index.html">Home</a>
+      <a class="button current" href="about.html">About</a>
+      <a class="button" href="projects.html">Projects</a>
+      <a class="button" href="video.html">Video</a>
+      <a class="button" href="contact.html">Contact</a>
+    </nav>
+
+    <main id="content">
+      <section class="two-col">
+        <div class="left">
+          <img class="headshot large" src="assets/headshot.jpg" alt="Judah Odoom headshot">
+        </div>
+        <div class="right">
+          <h2>Judah Odoom</h2>
+          <p>My name is Judah Odoom. I am a student at Ontario Tech University studying IT and Network Security. I am 18 years old and in my second year of study.</p>
+          <p>On the web side, I focus on building accessible, responsive interfaces that load fast and work across devices. On the security side, I’m developing foundational skills in protecting networks and systems.</p>
+        </div>
+        <div class="clear"></div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <p>© <span id="year"></span> Judah Odoom</p>
+    </footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

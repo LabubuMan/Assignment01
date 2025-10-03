@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/* Base styles shared across viewports */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #05176B, #000000);
+}
+
+a { color: #FFFFFF; text-decoration: none; }
+a:focus { outline: 2px dashed #fff; outline-offset: 2px; }
+
+#wrapper {
+  width: 96%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(41,41,41,0.35);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* Banner */
+#banner { padding: 20px 16px; background-color: rgba(5,23,107,0.65); }
+#banner h1 { margin: 0 0 6px 0; }
+.tagline { margin: 0; opacity: 0.9; }
+
+/* Nav as large tappable buttons (no hover menus) */
+#nav { padding: 12px 16px; background-color: rgba(0,0,0,0.35); }
+.button {
+  display: inline-block;
+  padding: 10px 14px;
+  margin: 6px 6px 0 0;
+  border: 2px solid #FFFFFF;
+  border-radius: 6px;
+  background-color: transparent;
+}
+.button:hover { transform: translateY(-2px) scale(1.02); transition: transform 200ms; }
+.button.current { background-color: rgba(255,255,255,0.12); }
+.button.ghost { border-color: #9aa7ff; }
+.button.small { padding: 6px 10px; font-size: 0.9rem; }
+.button.cta { background-color: #05176B; border-color: #05176B; }
+
+/* Layout helpers (float-based) */
+.left  { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+
+/* Content */
+#content { padding: 16px; }
+
+.hero .headshot { border-radius: 10px; border: 2px solid #fff; }
+.hero .cta-wrap .button { margin-right: 8px; }
+
+.card {
+  background-color: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 12px;
+  margin: 8px;
+  transition: transform 250ms, box-shadow 250ms;
+}
+.card:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 10px 18px rgba(0,0,0,0.4); }
+
+.project h3 { margin-top: 0; }
+
+/* Forms */
+form { max-width: 700px; }
+label { display: block; margin: 12px 0 6px; }
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.4);
+  background-color: rgba(0,0,0,0.25);
+  color: #FFFFFF;
+}
+input::placeholder { color: #ddd; }
+
+/* Video styling (frame look) */
+video {
+  width: 100%;
+  height: auto;
+  background-color: #000000;
+  border: 2px solid #FFFFFF;
+  box-shadow: 10px 10px 5px #000000;
+  display: block;
+  margin: 12px 0;
+}
+
+/* Footer */
+#footer { padding: 16px; text-align: center; background-color: rgba(0,0,0,0.45); }
+#footer a { text-decoration: underline; }
+
+/* Accessible link focus inside cards/buttons */
+.button:focus, .card:focus-within { outline: 2px dashed #fff; outline-offset: 3px; }
+
+/* Mobile-first, single column */
+.hero .headshot { width: 100%; max-width: 340px; display: block; margin: 0 auto 12px; }
+.hero .hero-text { /* stack below headshot */ }
+
+.highlights .card { width: 100%; }
+
+.two-col .left,
+.two-col .right { float: none; width: 100%; }
+
+.grid .card { width: 100%; }
+
+#footer { font-size: 0.95rem; }
